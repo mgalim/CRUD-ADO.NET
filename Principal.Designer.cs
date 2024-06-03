@@ -32,7 +32,7 @@
             lblStatusTxt = new Label();
             btnDelete = new Button();
             btnUpdate = new Button();
-            dtgvUser = new DataGridView();
+            dgvUser = new DataGridView();
             btnCreate = new Button();
             lblPass = new Label();
             lblUser = new Label();
@@ -47,7 +47,7 @@
             txtPass = new TextBox();
             txtMail = new TextBox();
             btnExit = new Button();
-            ((System.ComponentModel.ISupportInitialize)dtgvUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUser).BeginInit();
             SuspendLayout();
             // 
             // lblStatus
@@ -89,16 +89,16 @@
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
             // 
-            // dtgvUser
+            // dgvUser
             // 
-            dtgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dtgvUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvUser.Location = new Point(12, 290);
-            dtgvUser.Name = "dtgvUser";
-            dtgvUser.RowHeadersWidth = 51;
-            dtgvUser.Size = new Size(765, 290);
-            dtgvUser.TabIndex = 4;
-            dtgvUser.CellClick += dtgvUser_CellClick;
+            dgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUser.Location = new Point(12, 290);
+            dgvUser.Name = "dgvUser";
+            dgvUser.RowHeadersWidth = 51;
+            dgvUser.Size = new Size(765, 290);
+            dgvUser.TabIndex = 4;
+            dgvUser.CellClick += dtgvUser_CellClick;
             // 
             // btnCreate
             // 
@@ -241,7 +241,7 @@
             Controls.Add(lblUser);
             Controls.Add(lblPass);
             Controls.Add(btnCreate);
-            Controls.Add(dtgvUser);
+            Controls.Add(dgvUser);
             Controls.Add(btnUpdate);
             Controls.Add(btnDelete);
             Controls.Add(lblStatusTxt);
@@ -250,7 +250,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUD ADO.NET";
             Load += frmPrincipal_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgvUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUser).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -261,7 +261,7 @@
         private Label lblStatusTxt;
         private Button btnDelete;
         private Button btnUpdate;
-        private DataGridView dtgvUser;
+        private DataGridView dgvUser;
         private Button btnCreate;
         private Label lblPass;
         private Label lblUser;

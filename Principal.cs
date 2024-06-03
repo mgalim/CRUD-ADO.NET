@@ -22,7 +22,7 @@ namespace CRUD_ADO.NET
 
                     lblStatusTxt.Text = "Usuario eliminado";
                     lblStatusTxt.ForeColor = Color.Green;
-                    dtgvUser.DataSource = null;
+                    dgvUser.DataSource = null;
                     LoadUsers();
                     ResetForm();
                 }
@@ -56,7 +56,7 @@ namespace CRUD_ADO.NET
                     gestorDB.UpdateUser(idUser, usuario);
                     lblStatusTxt.Text = "Usuario actualizado";
                     lblStatusTxt.ForeColor = Color.Green;
-                    dtgvUser.DataSource = null;
+                    dgvUser.DataSource = null;
                     LoadUsers();
                     ResetForm();
                     idUser = 0;
@@ -77,8 +77,10 @@ namespace CRUD_ADO.NET
         {
             try
             {
-                dtgvUser.AutoGenerateColumns = true;
-                dtgvUser.DataSource = gestorDB.GetUsuarios();
+                dgvUser.AutoGenerateColumns = true;
+                dgvUser.Refresh();
+                dgvUser.RowTemplate.Height = 35;
+                dgvUser.DataSource = gestorDB.GetUsuarios();
 
             }
             catch (Exception ex)
@@ -134,7 +136,7 @@ namespace CRUD_ADO.NET
                     int userId = gestorDB.CreateUser(usuario);
                     lblStatusTxt.Text = $"Usuario registrado con el Id: {userId}";
                     lblStatusTxt.ForeColor = Color.Green;
-                    dtgvUser.DataSource = null;
+                    dgvUser.DataSource = null;
                     LoadUsers();
                     ResetForm();
                     idUser = 0;
@@ -152,7 +154,7 @@ namespace CRUD_ADO.NET
             if (e.RowIndex >= 0)
             {
                 rowSelected = (int)e.RowIndex;
-                idUser = Convert.ToInt32(dtgvUser[0, rowSelected].Value);
+                idUser = Convert.ToInt32(dgvUser[0, rowSelected].Value);
                 lblStatusTxt.Text = $"Se seleccionó al usuario con id: {idUser}";
                 lblStatusTxt.ForeColor = Color.Green;
                 if (idUser > 0)
