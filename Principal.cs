@@ -169,6 +169,11 @@ namespace CRUD_ADO.NET
             }
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

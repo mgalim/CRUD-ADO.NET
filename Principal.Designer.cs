@@ -46,6 +46,7 @@
             txtUser = new TextBox();
             txtPass = new TextBox();
             txtMail = new TextBox();
+            btnExit = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgvUser).BeginInit();
             SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(814, 386);
+            btnDelete.Location = new Point(814, 327);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(137, 56);
             btnDelete.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(814, 249);
+            btnUpdate.Location = new Point(814, 207);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(137, 56);
             btnUpdate.TabIndex = 3;
@@ -101,7 +102,7 @@
             // 
             // btnCreate
             // 
-            btnCreate.Location = new Point(814, 121);
+            btnCreate.Location = new Point(814, 88);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(137, 56);
             btnCreate.TabIndex = 5;
@@ -211,11 +212,22 @@
             txtMail.Size = new Size(250, 27);
             txtMail.TabIndex = 17;
             // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(814, 443);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(137, 56);
+            btnExit.TabIndex = 18;
+            btnExit.Text = "EXIT";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1001, 592);
+            Controls.Add(btnExit);
             Controls.Add(txtMail);
             Controls.Add(txtPass);
             Controls.Add(txtUser);
@@ -263,5 +275,6 @@
         private TextBox txtUser;
         private TextBox txtPass;
         private TextBox txtMail;
+        private Button btnExit;
     }
 }
